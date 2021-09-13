@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
 import AddTask from './components/AddTask'
+import Tasks from './components/Tasks'
 
 const App = () => {
   const [tasks, setTasks] = useState([])
@@ -26,6 +27,10 @@ const App = () => {
 
     <AddTask
       onTaskAdd={handleTaskAdd}
+    />
+
+    <Tasks
+      tasks={tasks}
     />
   </div>
 }
