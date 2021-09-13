@@ -22,6 +22,12 @@ const App = () => {
     setTasks(updatedTasks)
   }
 
+  const handleTaskDelete = ({ id }) => {
+    const updatedTasks = tasks.filter(task => task.id !== id)
+
+    setTasks(updatedTasks)
+  }
+
   return <div id="App">
     <h1>Todo List</h1>
 
@@ -31,6 +37,7 @@ const App = () => {
 
     <Tasks
       tasks={tasks}
+      onTaskDelete={handleTaskDelete}
     />
   </div>
 }

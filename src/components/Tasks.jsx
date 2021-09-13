@@ -5,6 +5,7 @@ const Tasks = props => {
     <Task
       key={task.id}
       id={task.id}
+      onTaskDelete={props.onTaskDelete}
     >
       {task.title}
     </Task>
