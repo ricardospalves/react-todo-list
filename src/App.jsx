@@ -22,6 +22,21 @@ const App = () => {
     setTasks(updatedTasks)
   }
 
+  const handleTaskDone = ({ id, isDone }) => {
+    const updatedTasks = tasks.map(task => {
+      if (task.id === id) {
+        return {
+          ...task,
+          isDone
+        }
+      }
+
+      return task
+    })
+
+    setTasks(updatedTasks)
+  }
+
   const handleTaskDelete = ({ id }) => {
     const updatedTasks = tasks.filter(task => task.id !== id)
 
@@ -37,6 +52,7 @@ const App = () => {
 
     <Tasks
       tasks={tasks}
+      onTaskDone={handleTaskDone}
       onTaskDelete={handleTaskDelete}
     />
   </div>

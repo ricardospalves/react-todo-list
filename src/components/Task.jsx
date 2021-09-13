@@ -1,4 +1,13 @@
 const Task = props => {
+  const handleDoneChange = () => {
+    const data = {
+      id: props.id,
+      isDone: !props.isDone
+    }
+
+    props.onTaskDone(data)
+  }
+
   const handleDeleteClick = () => {
     const data = {
       id: props.id
@@ -8,7 +17,19 @@ const Task = props => {
   }
 
   return <li id={props.id}>
-    {props.children}
+    <input
+      type="checkbox"
+      checked={props.isDone}
+      onChange={handleDoneChange}
+    />
+
+    <span
+      style={{
+        textDecoration: props.isDone ? 'line-through' : ''
+      }}
+    >
+      {props.children}
+    </span>
 
     <button
       onClick={handleDeleteClick}
