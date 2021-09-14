@@ -2,9 +2,11 @@ import { useState } from 'react'
 
 import { v4 as uuidv4 } from 'uuid'
 
-import GitHubCorner from './components/GitHubCorner'
 import AddTask from './components/AddTask'
 import Tasks from './components/Tasks'
+
+import Header from './layout/Header'
+import Footer from './layout/Footer'
 
 const App = () => {
   const [tasks, setTasks] = useState([])
@@ -60,20 +62,22 @@ const App = () => {
   }
 
   return <div id="App">
-    <h1>Todo List</h1>
+    <Header />
 
-    <GitHubCorner />
+    <main>
+      <AddTask
+        onTaskAdd={handleTaskAdd}
+      />
 
-    <AddTask
-      onTaskAdd={handleTaskAdd}
-    />
+      <Tasks
+        tasks={tasks}
+        onTaskDone={handleTaskDone}
+        onTaskTitleEdit={handleTaskTitleEdit}
+        onTaskDelete={handleTaskDelete}
+      />
+    </main>
 
-    <Tasks
-      tasks={tasks}
-      onTaskDone={handleTaskDone}
-      onTaskTitleEdit={handleTaskTitleEdit}
-      onTaskDelete={handleTaskDelete}
-    />
+    <Footer />
   </div>
 }
 
