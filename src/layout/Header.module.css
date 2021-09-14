@@ -43,17 +43,32 @@
   display: block;
   width: var(--GitHubCorner-size);
   height: var(--GitHubCorner-size);
+
+  color: var(--heading-color);
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+
+  transition: .2s;
+}
+
+.GitHubCorner:hover,
+.GitHubCorner:focus {
+
+  color: var(--link-color);
 }
 
 .GitHubCorner__octocat {
   display: block;
   width: inherit;
   height: inherit;
-  fill: var(--heading-color);
-  color: var(--body-bg-color);
+  fill: currentColor;
+}
+
+.GitHubCorner__octocatBody {
+  fill: var(--body-bg-color);
 }
 
 .GitHubCorner__octocatArm {
+  fill: var(--body-bg-color);
   transform-origin: 130px 106px;
 }
 
@@ -79,11 +94,5 @@
     position: fixed;
     right: 0;
     top: 0;
-  }
-}
-
-@media (max-width: 1023px) {
-  .GitHubCorner {
-    clip-path: polygon(0 0, 100% 0, 100% 100%);
   }
 }
