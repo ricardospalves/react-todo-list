@@ -66,7 +66,7 @@ const App = () => {
   return <div id="App" className={styles.App}>
     <Header />
 
-    <main>
+    <main className="container">
       <AddTask
         onTaskAdd={handleTaskAdd}
       />
