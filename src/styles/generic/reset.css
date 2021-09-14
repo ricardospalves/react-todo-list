@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before,
+::first-letter,
+::first-line,
+::backdrop,
+::placeholder,
+::marker {
+  box-sizing: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Heading */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+  font-size: inherit;
+}
+
+/* Grouping content */
+
+ul,
+ol {
+
+  list-style-type: none;
+}
+
+address {
+  font-style: normal;
+  line-height: inherit;
+}
+
+/* Embedded content */
+
+img,
+embed,
+object,
+audio,
+video {
+  max-width: 100%;
+}
+
+img,
+video,
+embed,
+object {
+  height: auto;
+}
+
+iframe {
+  border: 0;
+}
+
+/* Forms */
+
+fieldset {
+  min-width: 0;
+  border-style: none;
+}
+
+button,
+[type="submit"],
+[type="button"],
+[type="reset"] {
+
+  color: inherit;
+  border-style: none;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+/* Table */
+
+table {
+
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Others */
+
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-fields-wrapper,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-minute,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-year-field {
+  padding: 0;
+}
+
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+[hidden] {
+  display: none !important;
+}

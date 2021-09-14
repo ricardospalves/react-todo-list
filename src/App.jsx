@@ -2,6 +2,8 @@ import { useState } from 'react'
 
 import { v4 as uuidv4 } from 'uuid'
 
+import styles from './App.module.css'
+
 import AddTask from './components/AddTask'
 import Tasks from './components/Tasks'
 
@@ -61,7 +63,7 @@ const App = () => {
     setTasks(updatedTasks)
   }
 
-  return <div id="App">
+  return <div id="App" className={styles.App}>
     <Header />
 
     <main>

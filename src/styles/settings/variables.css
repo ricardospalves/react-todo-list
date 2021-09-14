@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+:root {
+  --font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+
+  --body-font-size: 1rem;
+  --body-line-height: 1.4;
+  --body-font-weight: 400;
+  --body-font-family: var(--font-sans-serif);
+  --body-color: #404040;
+  --body-bg-color: #FFF;
+
+  --heading-color: #000;
+  --link-color: #0000E0;
+
+  --input-color: #000;
+  --input-bg-color: var(--body-bg-color);
+
+  --outline: .125rem solid var(--link-color);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --body-color: #EFEFEF;
+    --body-bg-color: #202020;
+
+    --heading-color: #FFF;
+    --link-color: #0FF;
+
+    --input-color: #FFF;
+    --input-bg-color: var(--body-bg-color);
+  }
+}

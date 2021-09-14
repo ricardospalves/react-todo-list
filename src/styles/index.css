@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+/* Arquitetura ITCSS (Inverted Triangle CSS) */
+
+@import "./settings/index.css";
+@import "./generic/index.css";
+@import "./base/index.css";
+@import "./objects/index.css";
+@import "./components/index.css";
+@import "./utility/index.css";

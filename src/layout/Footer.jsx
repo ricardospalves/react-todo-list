@@ -1,5 +1,7 @@
+import styles from './Footer.module.css'
+
 const Footer = () => {
-  return <footer id="Footer">
+  return <footer id="Footer" className={styles.Footer}>
     <p>
       Distribuído sob a <a href="https://github.com/ricardospalves/react-todo-list/blob/main/LICENSE">licença MIT</a>.
     </p>

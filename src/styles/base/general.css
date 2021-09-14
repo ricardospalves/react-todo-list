@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+:root {
+  font-size: 16px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
+  font-weight: var(--body-font-weight);
+  font-family: var(--body-font-family);
+
+  color: var(--body-color);
+  background-color: var(--body-bg-color);
+
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+button:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: var(--outline);
+  outline-offset: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+  color: var(--heading-color);
+}
+
+a {
+
+  color: var(--link-color);
+}
+
+hr {
+  height: 1px;
+  margin: 1rem 0;
+
+  color: inherit;
+  background-color: currentColor;
+  border: 0;
+}
+
+select,
+[list],
+textarea,
+[type="tel"],
+[type="url"],
+[type="date"],
+[type="text"],
+[type="email"],
+[type="month"],
+[type="time"],
+[type="week"],
+[type="search"],
+[type="number"],
+[type="password"],
+[type="datetime"],
+[type="datetime-local"] {
+  padding: 0 .5em;
+  border: 1px solid currentColor;
+
+  font-family: var(--font-sans-serif);
+
+  color: var(--input-color);
+  background-color: var(--input-bg-color);
+}
+
+label[for] {
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+select[multiple] {
+  height: auto;
+}
