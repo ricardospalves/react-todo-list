@@ -5,12 +5,12 @@ const Tasks = props => {
     <Task
       key={task.id}
       id={task.id}
+      title={task.title}
       isDone={task.isDone}
       onTaskDone={props.onTaskDone}
+      onTaskTitleEdit={props.onTaskTitleEdit}
       onTaskDelete={props.onTaskDelete}
-    >
-      {task.title}
-    </Task>
+    />
   )
   const Items = props.tasks.map(createTasksItems)
 

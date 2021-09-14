@@ -43,6 +43,21 @@ const App = () => {
     setTasks(updatedTasks)
   }
 
+  const handleTaskTitleEdit = ({ id, title }) => {
+    const updatedTasks = tasks.map(task => {
+      if(task.id === id) {
+        return {
+          ...task,
+          title
+        }
+      }
+
+      return task
+    })
+
+    setTasks(updatedTasks)
+  }
+
   return <div id="App">
     <h1>Todo List</h1>
 
@@ -53,6 +68,7 @@ const App = () => {
     <Tasks
       tasks={tasks}
       onTaskDone={handleTaskDone}
+      onTaskTitleEdit={handleTaskTitleEdit}
       onTaskDelete={handleTaskDelete}
     />
   </div>
