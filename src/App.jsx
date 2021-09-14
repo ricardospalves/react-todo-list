@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import { v4 as uuidv4 } from 'uuid'
 
+import GitHubCorner from './components/GitHubCorner'
 import AddTask from './components/AddTask'
 import Tasks from './components/Tasks'
 
@@ -60,6 +61,8 @@ const App = () => {
 
   return <div id="App">
     <h1>Todo List</h1>
+
+    <GitHubCorner />
 
     <AddTask
       onTaskAdd={handleTaskAdd}
