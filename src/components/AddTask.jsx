@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import styles from './AddTask.module.css'
+
 const AddTask = props => {
   const [taskTitle, setTaskTitle] = useState('')
 
@@ -24,9 +26,10 @@ const AddTask = props => {
     setTaskTitle(value)
   }
 
-  return <form onSubmit={handleFormSubmit}>
+  return <form onSubmit={handleFormSubmit} className={styles.AddTask}>
     <label
       htmlFor="inputTaskTitle"
+      className={styles.AddTask__label}
     >
       Título da tarefa
     </label>
@@ -34,12 +37,18 @@ const AddTask = props => {
     <input
       type="text"
       id="inputTaskTitle"
+      className={styles.AddTask__field}
       value={taskTitle}
       onInput={handleTaskTitleInput}
       required
+      autoFocus
     />
 
-    <button>Adicionar</button>
+    <button
+      className={styles.AddTask__submit}
+    >
+      Adicionar
+    </button>
   </form>
 }
 

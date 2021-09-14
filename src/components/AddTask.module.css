@@ -1,0 +1,48 @@
+.AddTask {
+  --AddTask__field-height: 2.5rem;
+
+  margin-bottom: 2rem;
+}
+
+.AddTask__label {
+  display: block;
+  width: 100%;
+  padding-bottom: .5em;
+}
+
+.AddTask__field {
+  display: block;
+  height: var(--AddTask__field-height);
+}
+
+.AddTask__submit {
+  display: block;
+  height: var(--AddTask__field-height);
+  padding: 0 1rem;
+}
+
+@media (min-width: 1024px) {
+  .AddTask {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .AddTask__field {
+    flex: 1 1 auto;
+  }
+
+  .AddTask__submit {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 1023px) {
+  .AddTask {
+    padding: 0 .5rem;
+  }
+
+  .AddTask__field,
+  .AddTask__submit {
+    width: 100%;
+  }
+}
