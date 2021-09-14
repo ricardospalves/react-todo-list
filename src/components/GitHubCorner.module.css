@@ -1,19 +1,22 @@
 @keyframes animation-GitHubCorner-wave {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(0);
   }
 
-  20%, 60%{
+  20%,
+  60% {
     transform: rotate(-25deg);
   }
 
-  40%, 80%{
+  40%,
+  80% {
     transform: rotate(10deg);
   }
 }
 
 .GitHubCorner {
-  --size: 4rem;
+  --size: 5rem;
 
   display: block;
   width: var(--size);
@@ -22,6 +25,8 @@
   position: fixed;
   top: 0;
   right: 0;
+
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
 }
 
 .GitHubCorner__octocat {
