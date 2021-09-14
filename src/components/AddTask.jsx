@@ -45,7 +45,7 @@ const AddTask = props => {
     />
 
     <button
-      className={styles.AddTask__submit}
+      className={`${styles.AddTask__submit}`}
     >
       Adicionar
     </button>

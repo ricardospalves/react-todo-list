@@ -19,6 +19,17 @@
   display: block;
   height: var(--AddTask__field-height);
   padding: 0 1rem;
+
+  color: var(--body-bg-color);
+  background-color: var(--heading-color);
+
+  transition: background-color .2s;
+}
+
+.AddTask__submit:hover,
+.AddTask__submit:focus {
+
+  background-color: var(--body-color);
 }
 
 @media (min-width: 1024px) {
