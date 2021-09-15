@@ -1,6 +1,7 @@
 .AddTask {
   --AddTask__field-height: 2.5rem;
 
+  padding-top: 1rem;
   margin-bottom: 2rem;
 }
 
@@ -49,7 +50,10 @@
 
 @media (max-width: 1023px) {
   .AddTask {
-    padding: 0 .5rem;
+    --padding-x: .5rem;
+
+    padding-right: var(--padding-x);
+    padding-left: var(--padding-x);
   }
 
   .AddTask__field,
