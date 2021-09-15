@@ -7,7 +7,7 @@ import styles from './App.module.css'
 import AddTask from './components/AddTask'
 import Tasks from './components/Tasks'
 
-import Header from './layout/Header'
+import GitHubCorner from './layout/GitHubCorner'
 import Footer from './layout/Footer'
 
 const App = () => {
@@ -64,7 +64,7 @@ const App = () => {
   }
 
   return <div id="App" className={styles.App}>
-    <Header />
+    <GitHubCorner />
 
     <main className="container">
       <AddTask

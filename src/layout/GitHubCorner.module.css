@@ -1,0 +1,68 @@
+@keyframes animation-GitHubCorner-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+
+.GitHubCorner {
+  --size: 4rem;
+
+  display: block;
+  width: var(--size);
+  height: var(--size);
+
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  color: var(--heading-color);
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+
+  transition: .2s;
+}
+
+.GitHubCorner:hover,
+.GitHubCorner:focus {
+
+  color: var(--link-color);
+}
+
+.GitHubCorner__octocat {
+  display: block;
+  width: inherit;
+  height: inherit;
+  fill: currentColor;
+}
+
+.GitHubCorner__octocatBody {
+  fill: var(--body-bg-color);
+}
+
+.GitHubCorner__octocatArm {
+  fill: var(--body-bg-color);
+  transform-origin: 130px 106px;
+}
+
+@media (pointer: fine) {
+  .GitHubCorner:hover .GitHubCorner__octocatArm,
+  .GitHubCorner:focus .GitHubCorner__octocatArm {
+    animation: animation-GitHubCorner-wave infinite 560ms ease-in-out
+  }
+}
+
+@media (pointer: coarse) {
+  .GitHubCorner__octocatArm {
+    animation: animation-GitHubCorner-wave infinite 560ms ease-in-out;
+  }
+}
