@@ -20,16 +20,12 @@ const Task = props => {
 
   const handleTitleInput = event => {
     const value = event.target.value
-
-    if(value.trim()) {
-      const data = {
-        id: props.id,
-        title: value
-      }
-
-      props.onTaskTitleEdit(data)
+    const data = {
+      id: props.id,
+      title: value
     }
 
+    props.onTaskTitleEdit(data)
   }
 
   return <li id={props.id} className={styles.Task}>
